@@ -20,3 +20,35 @@ function generate_draw(category) {
 
   return draw;
 }
+
+function generateButton(e) {
+  var selector = document.getElementById('selected-class');
+  var klass = selector.options[selector.selectedIndex].value;
+  var draw = generate_draw(klass);
+
+  clearDisplay();
+  var display = document.getElementById('displayed-draw');
+
+  for (var i = 0; i < draw.length; i++) {
+    var node = makeNode(draw[i]);
+
+  }
+}
+
+function makeNode(point) {
+  var e = document.createElement('img');
+  e.src = 'resources/' + point + '.png';
+  return e;
+}
+
+function clearDisplay() {
+  var display = document.getElementById('displayed-draw');
+  for (;display.children.length > 0;) {
+    display.removeChild(display.children[0]);
+  }
+}
+
+window.onload = function() {
+  // TODO native js
+  $('#generate-button').on('click', generateButton);
+}
