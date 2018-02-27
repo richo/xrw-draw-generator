@@ -31,6 +31,7 @@ function generateButton(e) {
 
   for (var i = 0; i < draw.length; i++) {
     var node = makeNode(draw[i]);
+    display.appendChild(node);
 
   }
 }
@@ -49,6 +50,5 @@ function clearDisplay() {
 }
 
 window.onload = function() {
-  // TODO native js
   $('#generate-button').on('click', generateButton);
 }
