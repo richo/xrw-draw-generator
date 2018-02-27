@@ -51,6 +51,6 @@ function clearDisplay() {
 }
 
 window.onload = function() {
-  $('#generate-button').on('click', generateButton);
+  document.getElementById('generate-button').addEventListener('click', generateButton);
   generateButton(null);
 }
