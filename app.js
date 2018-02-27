@@ -39,6 +39,7 @@ function generateButton(e) {
 function makeNode(point) {
   var e = document.createElement('img');
   e.src = 'resources/' + point + '.png';
+  e.style="width: 160px;";
   return e;
 }
 
