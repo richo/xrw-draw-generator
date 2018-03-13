@@ -1,3 +1,4 @@
+var silly = true;
 function generate_draw(category) {
   var open = ['a', 'a', 'b', 'b', 'c', 'c', 'd', 'd', 'e', 'e'];
   var advanced = ['a', 'a', 'b', 'b', 'c', 'c'];
@@ -38,7 +39,11 @@ function generateButton(e) {
 
 function makeNode(point) {
   var e = document.createElement('img');
-  e.src = 'resources/' + point + '.png';
+  if (silly) {
+    e.src = 'resources/lols/' + point + '.png';
+  } else {
+    e.src = 'resources/' + point + '.png';
+  }
   e.style="width: 160px;";
   return e;
 }
